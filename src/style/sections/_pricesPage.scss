@@ -1,0 +1,93 @@
+#prices-welcome-bg {
+  .prices-page-bg {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    @include respond(phone) {
+      height: 200px;
+    }
+
+    .background-image-children {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include respond(phone) {
+        margin: 10rem 0 0;
+      }
+
+      .prices-over-title {
+        margin-top: 56px;
+        color: $white-color;
+        font-family: $font-haviland;
+        font-size: 5rem;
+        margin-bottom: 2rem;
+        @include respond(tab-land) {
+          font-size: 4rem;
+        }
+        @include respond(tab-port) {
+          font-size: 3.6rem;
+        }
+        @include respond(phone) {
+          font-size: 2rem;
+          line-height: 0.1;
+          margin: 0;
+        }
+        @include respond(phone-xs) {
+          font-size: 1.8rem;
+        }
+      }
+      .prices-welcome-bg-title {
+        z-index: 10;
+        color: $white-color;
+        font-size: 5.6rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        @include respond(tab-land) {
+          font-size: 4rem;
+        }
+        @include respond(tab-port) {
+          font-size: 3.6rem;
+        }
+        @include respond(phone) {
+          letter-spacing: 1px;
+          font-size: 2.5rem;
+          line-height: 1.5;
+          margin: 1.5rem 0;
+        }
+        @include respond(phone-xs) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  font-size: 2rem;
+  & > * {
+    padding: 5px;
+  }
+  .error {
+    color: red;
+  }
+}
+//bakground-overlay
+#best-offers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: 300px;
+  background-color: black;
+  opacity: 0.5;
+  @include respond(phone) {
+    height: 200px;
+  }
+}
+  

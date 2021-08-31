@@ -1,0 +1,90 @@
+#presentation {
+  z-index: 50;
+  .presentation-row {
+    padding: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    .title-small-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      //title
+      .section-title-small {
+        margin: 1rem 0 0;
+        @include respond(tab-land) {
+          font-size: 1.6rem;
+        }
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+        }
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+        @include respond(phone-xs) {
+          font-size: 1.9rem;
+        }
+      }
+    }
+    &__col {
+      padding: 0;
+      @include respond(tab-land) {
+        padding: 3px;
+      }
+      @include respond(phone) {
+        padding: 5px 0;
+      }
+      .presentation-wrapper__info-container {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        .presentation-wrapper__info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          text-align: center;
+          font-size: 18px;
+          color: $dark-grey;
+          padding: 4rem 1rem;
+          background-color: #f8f8f8;
+          @include respond(tab-land) {
+            font-size: 1.6rem;
+          }
+          @include respond(tab-port) {
+            font-size: 1.1rem;
+            padding: 2rem 1rem;
+          }
+          @include respond(phone) {
+            font-size: 1.5rem;
+          }
+          @include respond(phone-xs) {
+            font-size: 1.2rem;
+          }
+
+          .hr-styled {
+            border: 1px solid;
+            width: 35%;
+            margin-right: auto;
+            margin-left: auto;
+          }
+
+          &-text {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: none;
+            line-height: 1.45em;
+            letter-spacing: 0px;
+            max-height: 150px;
+            @include respond(tab-land) {
+              overflow:auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

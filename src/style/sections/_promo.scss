@@ -1,0 +1,96 @@
+#promo {
+  .promo-row {
+    &__col {
+      .promo-wrapper__info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .promo-over-title {
+          font-family: $font-haviland;
+          color: $primary-color;
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+        .section-title-small {
+          font-family: $font-ralewey;
+          font-size: 4rem;
+          @include respond(tab-land) {
+            font-size: 2rem;
+          }
+          @include respond(tab-port) {
+            font-size: 1.5rem;
+          }
+          @include respond(phone) {
+            font-size: 1.8rem;
+          }
+          @include respond(phone-xs) {
+            font-size: 1.8rem;
+          }
+          font-size: 4rem;
+        }
+        p {
+          text-align: left;
+        }
+      }
+      .promo-wrapper__image {
+        padding: 7px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+    }
+    .cta-btn--hero {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    /* Hero Style */
+    .cta-btn--hero {
+      background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 10%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-width: 2px;
+      border-style: solid;
+      border-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 10%);
+      border-image-slice: 1;
+      cursor: pointer;
+      width: 250px;
+      margin: 10px;
+
+      // Responsive Button hero style
+      @include respond(tab-land) {
+        max-width: 100%;
+      }
+      @include respond(tab-port) {
+        max-width: 90%;
+      }
+      @include respond(phone) {
+        max-width: 60%;
+        background-image: none;
+        border: 2px solid $secondary-color;
+        -webkit-text-fill-color: $secondary-color;
+      }
+
+      &::after {
+        background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+        // Responsive Button hero style
+        @include respond(phone) {
+          background-image: none;
+        }
+      }
+
+      &:hover {
+        -webkit-text-fill-color: $white-color;
+        text-decoration: none;
+        // Responsive Button hover hero style
+        @include respond(phone) {
+          -webkit-text-fill-color: $secondary-color;
+        }
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

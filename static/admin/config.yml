@@ -1,0 +1,248 @@
+backend:
+  name: github
+  repo: EcoMadeirinha/AlgarveHomeService
+  branch: main
+
+media_folder: src/images/uploads
+public_folder: ../images/uploads
+
+collections:
+  - name: blog
+    label: Blog
+    folder: src/markdown-pages
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
+      - {
+          label: 'Slug',
+          name: 'slug',
+          widget: 'string',
+          hint: 'Always use: /blog/page-name  No spaces between. For ex: /blog/sports-massage',
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Featured Image',
+          name: 'featured',
+          widget: 'image',
+          hint: 'Only files *.WEBP , to convert your image go to the : https://squoosh.app/ ',
+        }
+      - { label: 'Description', name: 'excerpt' }
+      - { label: 'Tags', name: 'tags', widget: 'list', hint: 'Separate by comma' }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+  - label: 'InitialPage'
+    name: 'InitialPage_sections'
+    files:
+      - label: 'Hero Section'
+        name: 'hero'
+        file: 'src/mock/hero.json'
+        fields:
+          - { label: OverTitle, name: overTitle, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: AfterTitle, name: afterTitle, widget: string }
+          - { label: ButtonOne, name: buttonOne, widget: string }
+          - { label: Link_to_ButtonOne, name: link_to_ButtonOne, widget: string }
+          - { label: ButtonTwo, name: buttonTwo, widget: string }
+          - { label: Link_to_ButtonTwo, name: link_to_ButtonTwo, widget: string }
+      - label: 'Presentation Section'
+        name: 'presentation'
+        file: 'src/mock/presentation.json'
+        fields:
+          - lable: block_One
+            name: 'block_One'
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Message, name: message, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Image_Description, name: image_Description, widget: string }
+              - { label: Button, name: button, widget: string }
+              - { label: Link_to, name: link_to, widget: string }
+          - lable: block_Two
+            name: 'block_Two'
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Message, name: message, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Image_Description, name: image_Description, widget: string }
+              - { label: Button, name: button, widget: string }
+              - { label: Link_to, name: link_to, widget: string }
+          - lable: block_Three
+            name: 'block_Three'
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Message, name: message, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Image_Description, name: image_Description, widget: string }
+              - { label: Button, name: button, widget: string }
+              - { label: Link_to, name: link_to, widget: string }
+      - label: 'Service Section'
+        name: 'service'
+        file: 'src/mock/service.json'
+        fields:
+          - lable: block_One
+            name: 'block_One'
+            widget: object
+            fields:
+              - { label: Over_Title, name: over_Title, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Image_Description, name: alt, widget: string }
+              - { label: Price_From, name: price_From, widget: string }
+              - { label: Link_to, name: link_to, widget: string }
+          - lable: block_Two
+            name: 'block_Two'
+            widget: object
+            fields:
+              - { label: Over_Title, name: over_Title, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Image_Description, name: alt, widget: string }
+              - { label: Price_From, name: price_From, widget: string }
+              - { label: Link_to, name: link_to, widget: string }
+          - lable: block_Three
+            name: 'block_Three'
+            widget: object
+            fields:
+              - { label: Over_Title, name: over_Title, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Image_Description, name: alt, widget: string }
+              - { label: Price_From, name: price_From, widget: string }
+              - { label: Link_to, name: link_to, widget: string }
+          - lable: block_Four
+            name: 'block_Four'
+            widget: object
+            fields:
+              - { label: Over_Title, name: over_Title, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Image_Description, name: alt, widget: string }
+              - { label: Price_From, name: price_From, widget: string }
+              - { label: Link_to, name: link_to, widget: string }
+      - label: 'About Us'
+        name: 'about'
+        file: 'src/mock/about_us.json'
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Position, name: position, widget: string }
+              - { label: 'Description', name: 'description', widget: 'text' }
+              - { label: Photo, name: photo, widget: image }
+              - { label: Image_Description, name: alt, widget: string }
+      - label: 'Testimonials'
+        name: 'testimonials'
+        file: 'src/mock/testimonials.json'
+        fields:
+          - { label: Background_Image, name: background_Image, widget: image }
+          - { label: Background_Image_Description, name: alt, widget: string }
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+              - { label: OverTitle, name: overTitle, widget: string, default: 'Testimonials' }
+              - { label: Title, name: title, widget: string, default: 'WHAT PEOPLE SAY ABOUT US' }
+              - { label: 'Message', name: 'message', widget: 'text' }
+              - { label: Photo, name: photo, widget: image }
+              - { label: Image_Description, name: alt, widget: string, default: 'Clients picture' }
+              - { label: Name, name: name, widget: string }
+      - label: 'EffectDH'
+        name: 'effect'
+        file: 'src/mock/effect.json'
+        fields:
+          - { label: Over_Title, name: over_Title, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: Button, name: button, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Image_Description, name: alt, widget: string }
+          - { label: Link_to, name: link_to, widget: string }
+      - label: 'Last Call'
+        name: 'lastCall'
+        file: 'src/mock/lastCall.json'
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: 'Sub_Title', name: 'sub_Title', widget: 'text' }
+          - { label: Button, name: button, widget: string }
+          - { label: Link_to, name: link_to, widget: string }
+          - { label: Background_Image, name: background_Image, widget: image }
+          - { label: Background_Image_Description, name: alt, widget: string }
+      - label: 'Footer Info'
+        name: 'footer'
+        file: 'src/mock/footer.json'
+        fields:
+          - { label: email, name: email, widget: string }
+          - { label: 'phone_Number', name: 'phone_Number', widget: 'text' }
+          - { label: Facebook Page, name: fbLink, widget: string }
+          - { label: 'Instagram Page', name: 'instaLink', widget: 'text' }
+          - { label: Logo, name: logo, widget: image }
+          - { label: Logo_Description, name: alt, widget: string }
+      - label: 'Header Info'
+        name: 'header'
+        file: 'src/mock/header.json'
+        fields:
+          - { label: Logo, name: logo, widget: image }
+          - { label: Logo_Description, name: alt, widget: string }
+          - { label: Logo_Link_to, name: logo_link_to, widget: string }
+          - label: Menu Tab
+            name: menu_tab
+            widget: list
+            fields:
+              - { label: Nav_Title, name: nav_title, widget: string }
+              - { label: Nav_Link, name: nav_link, widget: string }
+
+  - label: 'PricesPage'
+    name: 'Prices_sections'
+    files:
+      - label: 'Prices_Welcome_Page'
+        name: 'prices_Welcome_Page'
+        file: 'src/mock/prices_Page.json'
+        fields:
+          - { label: OverTitle, name: overTitle, widget: string, required: false }
+          - { label: Title, name: title, widget: string, default: 'Algarve Home Massage & Beauty' }
+          - { label: Background_Image, name: background_Image, widget: image }
+          - { label: Background_Image_Description, name: alt, widget: string }
+          - { label: Asterisc_Message, name: asterisc_Message, widget: string, required: false }
+          - label: 'Price_List_massage'
+            name: 'Price_List_massage'
+            widget: list
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Time60m', name: 'time60', widget: 'string', default: '60 min.' }
+              - { label: 'Price60m', name: 'price60', widget: 'string' }
+              - {
+                  label: 'Time90m',
+                  name: 'time90',
+                  widget: 'string',
+                  required: false,
+                  default: '// 90 min.',
+                }
+              - { label: 'Price90m', name: 'price90', widget: 'string', required: false }
+          - label: 'Price_List_Micropigmentation'
+            name: 'Price_List_Micropigmentation'
+            widget: list
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Initial Price', name: 'price60', widget: 'string' }
+              - { label: 'Correction', name: 'price90', widget: 'string', required: false }
+          - label: 'Price_List_Beauty'
+            name: 'Price_List_Beauty'
+            widget: list
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Time', name: 'time', widget: 'string', required: false }
+              - { label: 'Price', name: 'price60', widget: 'string' }
+          - label: 'Price_List_Hairdresser '
+            name: 'Price_List_Hairdresser'
+            widget: list
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Price', name: 'price60', widget: 'string' }
