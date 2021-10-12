@@ -21,10 +21,11 @@ const Hero = () => (
     </div>
     <Zoom duration={500} delay={10}>
       <p className="hero-cta">
-        <Link to="/blog/">
+        <Link to={heroData.Link_to_ButtonOne}>
+          <span className="cta-btn cta-btn--hero"></span>
           <span className="cta-btn cta-btn--hero">{heroData.buttonOne}</span>
         </Link>
-        <Link to="/prices-massage/">
+        <Link to={heroData.Link_to_ButtonTwo}>
           <span className="cta-btn cta-btn--hero">{heroData.buttonTwo}</span>
         </Link>
       </p>
