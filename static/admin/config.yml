@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: EcoMadeirinha/AlgarveHomeService
+  repo: DanHips/AlgarveHomeService
   branch: main
 
 media_folder: src/images/uploads
