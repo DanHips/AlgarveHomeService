@@ -1,4 +1,4 @@
-Home Servise Massage and Beauty
+Home Service Massage and Beauty
 
 Local Mobile Massage and Beauty Services.
 
