@@ -1,12 +1,12 @@
 ---
 layout: blog
-slug: '/blog/recovery-massage'
+slug: /blog/recovery-massage
 date: 2021-08-22T12:19:12.994Z
-title: "PHYSICALLY SPEAKING: RECOVERY MASSAGE"
+title: "Physically speaking: Recovery Massage"
 featured: recovery-massage.jpg
-excerpt: For the elite tennis player, showing up to every match alert,
-  refreshed and at the top of your game is essential for success. One key
-  component to on-court success is the use of recovery massage.
+excerpt: For the elite tennis player, showing up to every match alert, refreshed
+  and at the top of your game is essential for success. One key component to
+  on-court success is the use of recovery massage.
 ---
 Recovery massage focuses on three key areas: 
 
