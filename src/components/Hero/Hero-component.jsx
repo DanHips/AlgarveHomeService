@@ -22,7 +22,6 @@ const Hero = () => (
     <Zoom duration={500} delay={10}>
       <p className="hero-cta">
         <Link to={heroData.link_to_ButtonOne}>
-          <span className="cta-btn cta-btn--hero"></span>
           <span className="cta-btn cta-btn--hero">{heroData.buttonOne}</span>
         </Link>
         <Link to={heroData.link_to_ButtonTwo}>
