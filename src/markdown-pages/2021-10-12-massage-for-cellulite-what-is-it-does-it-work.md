@@ -1,6 +1,6 @@
 ---
 layout: blog
-slug: " /blog/massage-for-cellulite"
+slug: "/blog/massage-for-cellulite"
 date: 2021-10-12T17:06:23.265Z
 title: "Massage for Cellulite: What Is It, Does It Work?"
 featured: ../images/uploads/anti-cellulite-massage-m.jpg
