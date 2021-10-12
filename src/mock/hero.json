@@ -3,5 +3,7 @@
   "title": "MASSAGE & BEAUTY THERAPY",
   "afterTitle": "From Danylo Hips and Company",
   "buttonOne": "Our Blog",
-  "buttonTwo": "Book Now"
+  "buttonTwo": "Book Now",
+  "link_to_ButtonOne": "/blog/",
+  "link_to_ButtonTwo": "/prices-massage/"
 }
