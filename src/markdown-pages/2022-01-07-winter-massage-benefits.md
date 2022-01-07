@@ -1,6 +1,6 @@
 ---
 layout: blog
-slug: winter-massage-benefits
+slug: /blog/winter-massage-benefits
 date: 2022-01-07T17:13:26.021Z
 title: Winter Massage Benefits
 featured: ../images/uploads/woman-enjoying-massage.jpg
