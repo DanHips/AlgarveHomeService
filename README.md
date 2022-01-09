@@ -4,6 +4,6 @@ Local Mobile Massage and Beauty Services.
 
 Algarve. Portugal.
 
-Developed by https://github.com/EcoMadeirinha
+Developed by https://github.com/pavlo-omelianchuk
 
 <!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/db5f7355-d242-4bd0-a10f-0287ff8c7fda/deploy-status)](https://app.netlify.com/sites/algarvehomemassageandbeauty/deploys) -->
