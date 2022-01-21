@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
@@ -133,16 +133,15 @@ const SignupForm = ({
               modal.style.display = 'block';
             };
 
-            var span = document.getElementsByClassName('close')[0];
+            var closeBtn = document.getElementsByClassName('close')[0];
             modal.style.display = 'block';
 
-            span.onclick = function () {
+            closeBtn.onclick = function () {
+              console.log('clicked');
               modal.style.display = 'none';
             };
             window.onclick = function (event) {
-              if (event.target == modal) {
-                modal.style.display = 'none';
-              }
+              modal.style.display = 'none';
             };
             emailjs
               .send(
@@ -174,9 +173,7 @@ const SignupForm = ({
                     modal.style.display = 'none';
                   };
                   window.onclick = function (event) {
-                    if (event.target == modal) {
-                      modal.style.display = 'none';
-                    }
+                    modal.style.display = 'none';
                   };
                 }
               );
@@ -193,23 +190,13 @@ const SignupForm = ({
                 acceptedTerms: false,
               },
             });
-          }, 1000);
+          }, 500);
         }}
       >
         <Form className="main-form">
-          <TextInput label="Clients Name" name="clientsName" type="text" placeholder="Name" />
-          <TextInput
-            label="Email Address"
-            name="email"
-            type="email"
-            placeholder="info.ahsmb@gmail.com"
-          />
-          <PhoneNumberInput
-            label="Phone Number"
-            name="phoneNumber"
-            type="tel"
-            placeholder="+351 963 531 684"
-          />
+          <TextInput label="Clients Name" name="clientsName" type="text" placeholder="" />
+          <TextInput label="Email Address" name="email" type="email" placeholder="" />
+          <PhoneNumberInput label="Phone Number" name="phoneNumber" type="tel" placeholder="" />
           <PhoneNumberInput
             label="Location"
             name="location"
@@ -230,7 +217,7 @@ const SignupForm = ({
               );
             })}
           </TreatmentSelect>
-          <MessageInput label="Message Input" name="message" type="text" placeholder="Message" />
+          <MessageInput label="Message Input" name="message" type="text" placeholder="" />
           <MyCheckbox name="acceptedTerms">I accept the terms and conditions</MyCheckbox>
 
           <button id="submit" type="submit">
