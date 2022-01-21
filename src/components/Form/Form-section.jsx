@@ -133,7 +133,7 @@ const SignupForm = ({
               modal.style.display = 'block';
             };
 
-            var span = document.getElementsByclassName('close')[0];
+            var span = document.getElementsByClassName('close')[0];
             modal.style.display = 'block';
 
             span.onclick = function () {
@@ -167,7 +167,7 @@ const SignupForm = ({
                   console.log(error.text);
                   var modal = document.getElementById('error-popup');
 
-                  var span = document.getElementsByclassName('close')[0];
+                  var span = document.getElementsByClassName('close')[0];
                   modal.style.display = 'block';
 
                   span.onclick = function () {
